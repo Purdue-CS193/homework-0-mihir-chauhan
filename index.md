@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+# Mihir's First CS193 Homework
 
-You can use the [editor on GitHub](https://github.com/kalutes/CS193_Fall18_Lab1/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Favorite Things About CS193
+- Programming!
+- Being in the physics building
+- The lecturers
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Fun Code
+Here's a small program I just wrote to test the Collatz Conjecture! The method below uses BigIntegers to handle much larger numbers: `((2^32)^Integer.MAX_VALUE))`. The Collatz Conjecture (or the 2n+1) is one of the most famous math problem that has never been proven yet, and you can potentially win 120 million Japanese Yen to find a number that disproves this conjecture. Essentially, you start with a number `n` and if it is even, divide by 2, and otherwise, if odd, you apply `2n+1`.
 ```
+public static long collatzConjectureTest(BigInteger number) {
+    long counter = 0L;
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+    for(BigInteger aNum = number; !aNum.equals(new BigInteger("1")); ++counter) {
+        aNum = aNum.mod(new BigInteger("2")).equals(new BigInteger("0")) ? aNum.divide(new BigInteger("2")) : aNum.multiply(new BigInteger("3")).add(new BigInteger("1"));
+    }
 
-### Jekyll Themes
+    return counter;
+}
+```
+This function returns the number of steps it took to reach 1.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kalutes/CS193_Fall18_Lab1/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Support or Contact
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Reach me at [my email](mailto:chauhanm@purdue.edu)! Thanks
