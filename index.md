@@ -6,7 +6,7 @@
 - The lecturers
 
 ## Fun Code
-Here's a small program I just wrote to test the Collatz Conjecture! The method below uses BigIntegers to handle much larger numbers: `((2^32)^Integer.MAX_VALUE))`. The Collatz Conjecture (or the 2n+1) is one of the most famous math problem that has never been proven yet, and you can potentially win 120 million Japanese Yen to find a number that disproves this conjecture. Essentially, you start with a number `n` and if it is even, divide by 2, and otherwise, if odd, you apply `2n+1`.
+Here's a small program I just wrote to test the Collatz Conjecture! The method below uses BigIntegers to handle much larger numbers: `((2^32)^Integer.MAX_VALUE))`. The Collatz Conjecture (or the 3n+1) is one of the most famous math problem that has never been proven yet, and you can potentially win 120 million Japanese Yen to find a number that disproves this conjecture. Essentially, you start with a number `n` and if it is even, divide by 2, and otherwise, if odd, you apply `3n+1`.
 ```
 public static long collatzConjectureTest(BigInteger number) {
     long counter = 0L;
